@@ -127,6 +127,12 @@ build {
   }
   provisioner "shell" {
     scripts = [
+      "./provision/core/undo-usr-local-python-library-frameworks.sh"
+    ]
+    execute_command = "chmod +x {{ .Path }}; source $HOME/.bash_profile; {{ .Vars }} {{ .Path }}"
+  }
+  provisioner "shell" {
+    scripts = [
       "./provision/core/xcode-clt.sh",
       "./provision/core/homebrew.sh",
       "./provision/core/rosetta.sh"
