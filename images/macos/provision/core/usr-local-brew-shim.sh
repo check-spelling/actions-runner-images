@@ -9,7 +9,7 @@ source ~/utils/utils.sh
 #
 # What it does?
 # The script looks for files in /usr/local/bin that are not links to
-# ../Cellar/* and replaces them with
+# ../Cellar/* or ../Homebrew/* and replaces them with
 # equivalent symlinks in /usr/local/bin/.brew-shims.
 #
 # License
