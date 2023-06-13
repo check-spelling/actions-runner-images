@@ -239,7 +239,7 @@ build {
   }
   provisioner "shell" {
     scripts = [
-      "./provision/core/undo-usr-local-python-library-frameworks.sh"
+      "./provision/core/usr-local-brew-shim.sh"
     ]
     execute_command = "chmod +x {{ .Path }}; source $HOME/.bash_profile; {{ .Vars }} {{ .Path }}"
   }
