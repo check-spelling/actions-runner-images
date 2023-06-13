@@ -252,7 +252,7 @@ build {
   }
   provisioner "shell" {
     scripts = [
-      "./provision/core/usr-local-brew-shim.sh"
+      "./provision/core/relink-brew-packages.sh"
     ]
     execute_command = "chmod +x {{ .Path }}; source $HOME/.bash_profile; {{ .Vars }} {{ .Path }}"
   }
